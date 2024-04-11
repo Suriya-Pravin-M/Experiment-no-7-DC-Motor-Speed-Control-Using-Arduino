@@ -1,9 +1,9 @@
-###  DATE: 
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT:
 # Experiment-no-6-DC-Motor-Speed-Control-Using-Arduino
+##  DATE: 11-04-2024
+##  NAME: Suriya Pravin M
+##  ROLL NO : 212223230223
+##  DEPARTMENT: AI&DS
 ### AIM : To control the speed and the direction of a DC motor using L293D driver ic( H- bridge)
 
 ### Components Required:
@@ -30,21 +30,36 @@ TABLE-01 EXITATION TABLE FOR H BRIDGE
 
 As shown in the circuit diagram we need only 3 Arduino terminal pins, pin 8 is for the push button which toggles the motor direction of rotation. Pins 9 and 10 are PWM signal outputs, at any time there is only 1 active PWM, this allows us to control the direction as well as the speed by varying the duty cycle of the PWM signal. The active PWM pin decides the motor direction of rotation (one at a time, the other output is logic 0).
 
-### PROGRAM 
+### PROGRAM:
+```
+int in1=5;
+int in2=6;
+int en=3;
+void setup()
+{
+  pinMode(in1, OUTPUT);
+   pinMode(in2, OUTPUT);
+    pinMode(en, OUTPUT);
+}
 
+void loop()
+{
+   analogWrite (en,225);
+  digitalWrite(in1,LOW);
+   digitalWrite(in2,HIGH);
+  delay(500);
+ 
+}
+```
 ### OUTPUT
+![Circuit](https://github.com/Suriya-Pravin-M/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/150010919/4ad1778e-6681-4474-abaa-38ba3321ac3c)
+![Diagram](https://github.com/Suriya-Pravin-M/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/150010919/1b10e432-3c27-463a-82fc-ee9ffac00326)
+
 
 ### GRAPH AND TABULATION 
-![image](https://github.com/vasanthkumarch/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/36288975/739cc470-48c8-4873-a730-6319b4afc602)
-
-
-
-![image](https://github.com/vasanthkumarch/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/36288975/07e9b28e-9a5b-47bd-a023-3c27fe00fb2b)
-
-
-![image](https://github.com/vasanthkumarch/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/36288975/67ed339f-8011-4acc-b793-e5d4930639c7)
-
+![Graph](https://github.com/Suriya-Pravin-M/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/150010919/9a663fc1-9dff-43c9-b765-baab436b2885)
+![Table](https://github.com/Suriya-Pravin-M/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/150010919/9e193cc2-1a0a-4ad7-9632-b65eea8d0f27)
 
 
 ### RESULTS AND DISCUSSION 
-
+The program to control the speed and the direction of a DC motor using L293D driver ic( H- bridge) is completed and executed successfully.
